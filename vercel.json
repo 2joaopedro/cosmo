@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "pagina.html", "use": "@vercel/static" }
+    { "src": "assets/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/pagina.html" }
+    { "src": "/(.*)", "dest": "/assets/pagina.html" }
   ]
 }
