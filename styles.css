@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #353535;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 60px; /* Aumentado o espaçamento abaixo da seção de apresentação */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+  color: #00fcef;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+  color: #e9e9e9;
+}
+
+.informacoes {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  gap: 20px; /* Espaçamento entre os cards */
+  margin-top: 20px; /* Espaçamento acima dos cards */
+  flex-wrap: wrap; /* Permite que os cards se movam para a linha abaixo se não houver espaço suficiente */
+}
+
+.card {
+  background: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(31, 31, 31, 0.1);
+  padding: 10px;
+  width: 200px; /* Diminuído para cards menores */
+  box-sizing: border-box; /* Inclui a borda e o padding na largura total do card */
+}
+.card p {
+  text-align: start;
+}
+
+.video-container {
+  margin-top: 30px; /* Espaçamento acima da div do vídeo */
+  padding: 20px; /* Adiciona padding dentro da div do vídeo */
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  border: none;
+  border-radius: 8px;
+}
+
+.dropdown-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 20px; /* Espaçamento entre os dropdowns */
+  margin-top: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-title {
+  cursor: pointer;
+  border: 2px solid #00dffc; /* Cor da borda azul claro */
+  background-color: #333; /* Cor de fundo escura para contraste */
+  color: white; /* Cor do texto */
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #363636;
+  min-width: 200px; /* Largura mínima dos dropdowns */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+.dropdown.show .dropdown-title {
+  background-color: #0056b3;
+}
+
+.professor-info {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre a imagem e o texto */
+  margin-top: 40px; /* Margem superior para separar da seção anterior */
+}
+
+.professor-image {
+  width: 500px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+}
+
+.professor-bio {
+  max-width: 800px; /* Define uma largura máxima para o texto */
+  line-height: 1.6; /* Melhora a legibilidade do texto */
+  text-align: start;
+}
+
+.professor-info h2 {
+  text-align: start;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00fcef; /* Cor do texto do título */
+  font-weight: bold; /* Deixa o título em negrito */
+}
+
+/* Estilos para a seção de feedbacks */
+.feedbacks {
+  margin-top: 40px; /* Margem superior para separar da seção anterior */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.feedbacks h2 {
+  font-size: 1.8rem; /* Tamanho do título */
+  color: #333; /* Cor do texto do título */
+  margin-bottom: 10px; /* Margem inferior para separar do conteúdo */
+  text-align: center; /* Alinha o título ao centro */
+}
+
+.feedbacks p {
+  text-align: center; /* Alinha o texto ao centro */
+  color: hsl(0, 0%, 100%); /* Cor do texto */
+  margin-bottom: 20px; /* Margem inferior para separar do container de feedbacks */
+}
+
+.feedback-container {
+  display: flex; /* Flexbox para alinhar os itens em linha */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha se não houver espaço suficiente */
+  gap: 20px; /* Espaçamento entre os feedbacks */
+  justify-content: center; /* Alinha os itens ao centro */
+}
+
+.feedback {
+  padding: 10px; /* Espaçamento interno */
+}
+
+.feedback-image {
+  width: 500px; /* Largura da imagem */
+  height: 500px; /* Altura da imagem */
+}
+
+/* Estilo da chamada para ação */
+.cta-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.botao-compra {
+  display: inline-block;
+  border: 2px solid #00dffc; /* Cor da borda */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-compra:hover {
+  background-color: #00dffc; /* Cor de fundo laranja escuro */
+  transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .apresentacao h1 {
+    font-size: 2rem;
+  }
+
+  .apresentacao p {
+    font-size: 1rem;
+  }
+
+  .informacoes h3 {
+    font-size: 1.2rem;
+  }
+
+  .informacoes p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apresentacao h1 {
+    font-size: 1.5rem;
+  }
+
+  .apresentacao p {
+    font-size: 0.9rem;
+  }
+
+  .informacoes h3 {
+    font-size: 1rem;
+  }
+
+  .informacoes p {
+    font-size: 0.8rem;
+  }
+}
